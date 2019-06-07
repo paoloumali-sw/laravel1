@@ -21,3 +21,7 @@ Route::get('/log-image', function () {
     Log::error('image: '. file_get_contents(storage_path('images/screenshot.png')));
     return view('welcome');
 });
+
+Route::get('/phpinfo', function () {
+    echo phpinfo();
+});
