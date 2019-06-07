@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
+    Log::warn('some warning - '. now());
+    Log::error('some warning - '. now());    
+    return view('welcome');
+});
+
+Route::get('/log-image', function () {
+    Log::error('image: '. file_get_contents(storage_path('images/screenshot.png')));
     return view('welcome');
 });
