@@ -13,7 +13,8 @@
 
 Route::get('/', function () {
     Log::warn('some warning - '. now());
-    Log::error('some warning - '. now());    
+    Log::error('some error - '. now());    
+    Log::info('some info - '. now());    
     return view('welcome');
 });
 
